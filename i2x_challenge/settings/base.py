@@ -19,6 +19,7 @@ from sys import path
 # Absolute filesystem path to the Django project directory:
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = dirname(dirname(abspath(__file__)))
+DJANGO_DIR = dirname(BASE_DIR)
 
 # Absolute filesystem path to the top-level project folder:
 SITE_ROOT = dirname(BASE_DIR)
@@ -28,7 +29,7 @@ SITE_NAME = basename(BASE_DIR)
 
 # Add our project to our pythonpath, this way we don't need to type our project
 # name in our dotted import paths:
-path.append(BASE_DIR)
+path.append(DJANGO_DIR)
 # END PATH CONFIGURATION
 
 
@@ -44,7 +45,7 @@ DEBUG = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': join(BASE_DIR, 'db.sqlite3'),
+        'NAME': join(DJANGO_DIR, 'db.sqlite3'),
     }
 }
 # END DATABASE CONFIGURATION #

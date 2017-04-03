@@ -11,3 +11,6 @@ __pycache__/
 
 # VirtualEnv dir
 pyEnv/
+
+# Sqlite DB
+*.sqlite3

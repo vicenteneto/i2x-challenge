@@ -6,10 +6,6 @@ from .base import *
 
 # TOOLBAR CONFIGURATION
 # See: http://django-debug-toolbar.readthedocs.org/en/latest/installation.html#explicit-setup
-DJANGO_APPS += [
-    'django.contrib.staticfiles'
-]
-
 INSTALLED_APPS += [
     'debug_toolbar'
 ]
